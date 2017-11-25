@@ -36,6 +36,8 @@ import {
   TVEventHandler,
   View,
 } from 'react-native';
+import PropTypes from 'prop-types';
+import createClass from 'create-react-class';
 
 var AnimationsDebugModule = NativeModules.AnimationsDebugModule;
 var InteractionMixin = require('./InteractionMixin');
@@ -53,7 +55,6 @@ var rebound = require('rebound');
 
 var flattenStyle = require('./flattenStyle');
 
-var PropTypes = React.PropTypes;
 
 // TODO: this is not ideal because there is no guarantee that the navigator
 // is full screen, however we don't have a good way to measure the actual
@@ -297,7 +298,7 @@ var GESTURE_ACTIONS = [
  * See `Navigator.SceneConfigs` for default animations and more info on
  * available [scene config options](docs/navigator.html#configurescene).
  */
-var Navigator = React.createClass({
+var Navigator = createClass({
 
   propTypes: {
     /**
