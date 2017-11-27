@@ -35,6 +35,7 @@ import {
   StyleSheet,
   TVEventHandler,
   View,
+  ViewPropTypes,
 } from 'react-native';
 import PropTypes from 'prop-types';
 import createClass from 'create-react-class';
@@ -392,7 +393,7 @@ var Navigator = createClass({
     /**
      * Styles to apply to the container of each scene.
      */
-    sceneStyle: View.propTypes.style,
+    sceneStyle: ViewPropTypes.style,
   },
 
   statics: {
